@@ -1,0 +1,46 @@
+{
+  "data": [
+    {
+      "id": "bitcoin",
+      "symbol": "btc",
+      "name": "Bitcoin",
+      "image": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579",
+      "current_price": 11978.19
+    },
+    {
+      "id": "ethereum",
+      "symbol": "eth",
+      "name": "Ethereum",
+      "image": "https://assets.coingecko.com/coins/images/279/large/ethereum.png?1595348880",
+      "current_price": 343.21
+    },
+    {
+      "id": "tether",
+      "symbol": "usdt",
+      "name": "Tether",
+      "image": "https://assets.coingecko.com/coins/images/325/large/Tether-logo.png?1598003707",
+      "current_price": 0.852983
+    },
+    {
+      "id": "bitcoin-cash",
+      "symbol": "bch",
+      "name": "Bitcoin Cash",
+      "image": "https://assets.coingecko.com/coins/images/780/large/bitcoin-cash-circle.png?1594689492",
+      "current_price": 203.69
+    },
+    {
+      "id": "litecoin",
+      "symbol": "ltc",
+      "name": "Litecoin",
+      "image": "https://assets.coingecko.com/coins/images/2/large/litecoin.png?1547033580",
+      "current_price": 46.37
+    },
+    {
+      "id": "monero",
+      "symbol": "xmr",
+      "name": "Monero",
+      "image": "https://assets.coingecko.com/coins/images/69/large/monero_logo.png?1547033729",
+      "current_price": 99.06
+    }
+  ]
+}
