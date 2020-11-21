@@ -1,4 +1,4 @@
-# CryptoApp
+# Crypto Deals App
 This is a App for Android
 
 ## ¿What is this App build for?
