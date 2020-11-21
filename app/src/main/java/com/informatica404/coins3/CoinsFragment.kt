@@ -34,7 +34,7 @@ class CoinsFragment : Fragment() {
         }
         recyclerview.layoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
-        recyclerview.adapter = mAdapter
+            recyclerview.adapter = mAdapter
     }
 
 

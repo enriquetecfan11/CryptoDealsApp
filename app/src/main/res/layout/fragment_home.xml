@@ -56,41 +56,76 @@
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
-
-    <RelativeLayout
-        android:paddingTop="50dp"
-        android:layout_below="@+id/card_view_profile"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="10dp">
+        android:layout_height="500dp"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/card_view_profile">
 
-        <ImageView
-            android:id="@+id/cryptologo"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginRight="16dp" />
-
-        <TextView
-            android:id="@+id/cryptoname"
-            android:layout_width="290dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/cryptologo"
-            android:hint="Bitcoin"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/cryptoprice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/cryptoname"
-            android:layout_toRightOf="@+id/cryptologo"
-            android:hint="1.000.000" />
+            <!-- Media -->
+            <ImageView
+                android:id="@+id/cryptologo"
+                android:layout_width="match_parent"
+                android:layout_height="194dp"
+                android:src="@drawable/btclogo"
+                />
 
-    </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
 
+                <!-- Title, secondary and supporting text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bitcoin"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Price -> 1.000.000€ "
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Change Price -> 1.5%% "
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary"
+                    />
+
+            </LinearLayout>
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="View More"
+                    style="?attr/borderlessButtonStyle"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 </RelativeLayout>
