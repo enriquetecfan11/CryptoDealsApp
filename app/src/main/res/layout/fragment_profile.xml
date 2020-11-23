@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
     android:orientation="vertical"
     tools:context=".ProfileFragment">
 
@@ -33,7 +32,7 @@
           android:id="@+id/txtsurname"
           android:layout_marginTop="5dp"
           android:layout_width="match_parent"
-          android:layout_height="80dp"
+          android:layout_height="60dp"
           android:gravity="center_horizontal"
           android:text="kikerodrivela@gmail.com"
           android:textColor="@color/white"
