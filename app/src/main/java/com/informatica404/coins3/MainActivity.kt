@@ -3,7 +3,15 @@ package com.informatica404.coins3
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.informatica404.coins3.home.CoinsFragment
+import com.informatica404.coins3.home.HomeFragment
+import com.informatica404.coins3.home.NewsFragment
+import com.informatica404.coins3.home.ProfileFragment
 import kotlinx.android.synthetic.main.activity_main.*
+
+enum class ProviderType {
+    BASIC
+}
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

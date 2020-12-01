@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
+
 
 android {
     compileSdkVersion 30
@@ -31,6 +33,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.firebase:firebase-firestore:22.0.0'
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -41,6 +44,16 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.github.gayanvoice:android-animations-kotlin:1.0.1'
 
+
+    implementation platform('com.google.firebase:firebase-bom:26.1.0')
+    implementation 'com.google.firebase:firebase-analytics'
+
+    implementation 'com.google.firebase:firebase-auth-ktx:20.0.1'
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    implementation 'com.google.firebase:firebase-firestore-ktx:22.0.0'
+
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
 
 

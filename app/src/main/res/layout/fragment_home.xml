@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CoinsFragment"
+    tools:context=".home.CoinsFragment"
     android:orientation="vertical">
 
     <ImageView
@@ -22,10 +22,10 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/txtusername"
+            android:id="@+id/txtwelcome"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:text="Welcome to Crypto Deals "
             android:textColor="@color/white"
@@ -33,15 +33,14 @@
            />
 
         <TextView
-            android:layout_below="@+id/txtusername"
-            android:id="@+id/txtsurname"
-            android:layout_marginTop="5dp"
+            android:layout_below="@+id/txtwelcome"
+            android:id="@+id/txtusername"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:gravity="center_horizontal"
             android:text="Username and surname"
             android:textColor="@color/white"
-            android:textSize="25dp" />
+            android:textSize="30dp" />
     </RelativeLayout>
 
     <com.google.android.material.card.MaterialCardView

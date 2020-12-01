@@ -23,10 +23,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/Logo"
         android:layout_centerInParent="true"
-        android:hint="Email">
+        android:hint="Username">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email"
+            android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress" />
@@ -41,34 +41,39 @@
         android:layout_below="@+id/textField"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:hint="Email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textfield3"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textfield2"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:hint="Password">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/pass"
+            android:id="@+id/etPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <Button
-        android:id="@+id/btlogin"
+        android:id="@+id/btnSignUp"
         style="@style/Widget.MaterialComponents.Button.Icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textfield2"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="login"
-        android:textSize="20dp" />
-
-    <Button
-        android:id="@+id/registerbutton"
-        style="@style/Widget.MaterialComponents.Button.Icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btlogin"
+        android:layout_below="@id/textfield3"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="Register"

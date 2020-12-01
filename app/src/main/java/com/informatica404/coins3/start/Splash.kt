@@ -1,4 +1,4 @@
-package com.informatica404.coins3
+package com.informatica404.coins3.start
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
-import kotlinx.android.synthetic.main.activity_login.*
+import com.informatica404.coins3.R
 import kotlinx.android.synthetic.main.activity_splash.*
 import render.animations.*
 

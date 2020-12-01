@@ -4,11 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ProfileFragment">
+    tools:context=".home.ProfileFragment">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
         android:scaleType="centerCrop"
         android:src="@drawable/btclogo" />
 
@@ -18,53 +20,26 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/txtusername"
-            android:layout_marginTop="70dp"
+            android:id="@+id/txtname2"
             android:layout_width="match_parent"
             android:layout_height="80dp"
+            android:layout_marginTop="70dp"
             android:gravity="center_horizontal"
             android:text="Enrique Rodriguez Vela "
             android:textColor="@color/white"
             android:textSize="25dp" />
 
-      <TextView
-          android:layout_below="@+id/txtusername"
-          android:id="@+id/txtsurname"
-          android:layout_marginTop="5dp"
-          android:layout_width="match_parent"
-          android:layout_height="60dp"
-          android:gravity="center_horizontal"
-          android:text="kikerodrivela@gmail.com"
-          android:textColor="@color/white"
-          android:textSize="25dp" />
+        <TextView
+            android:id="@+id/txtemail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/txtusername"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="kikerodrivela@gmail.com"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
 
     </RelativeLayout>
-
-    <LinearLayout
-        android:layout_marginTop="100dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-      <com.google.android.material.button.MaterialButton
-          android:layout_width="150dp"
-          android:layout_height="50dp"
-          android:text="Log Out"
-          android:layout_marginStart="50dp"
-        />
-
-      <com.google.android.material.button.MaterialButton
-          android:layout_width="150dp"
-          android:layout_height="50dp"
-          android:text="Exit"
-          android:layout_marginStart="10dp"
-          />
-
-
-
-
-
-    </LinearLayout>
-
 
 </LinearLayout>

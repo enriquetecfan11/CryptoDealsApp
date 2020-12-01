@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "649259056156",
+    "firebase_url": "https://crypto-deals.firebaseio.com",
+    "project_id": "crypto-deals",
+    "storage_bucket": "crypto-deals.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:649259056156:android:c15c23731656cac8c233d9",
+        "android_client_info": {
+          "package_name": "com.informatica404.coins3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "649259056156-l0519i6ccff951tf36poo7bo0uiq90ge.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVt4BFyjn6tbBrMTuSSp__EaGY5YIl7Ik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "649259056156-l0519i6ccff951tf36poo7bo0uiq90ge.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
