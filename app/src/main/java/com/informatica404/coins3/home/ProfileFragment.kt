@@ -50,13 +50,18 @@ class ProfileFragment : Fragment() {
         db.collection("users").document(uid).get().addOnSuccessListener { document ->
 
             var user = document.toObject(Users::class.java)
-            Log.d(TAG, "${user?.name}")
-
-            this.txtemail.text = user?.name.toString()
-            //this.txtemail.text = user?.email.toString()
-
             var email = auth.currentUser?.email
-            txtname2.text = email.toString()
+
+
+
+            if (user != null) {
+                txtname.text = "Welcome, " + user.name.toString()
+            }
+
+            if (user != null) {
+                txtemail.text = email.toString()
+            }
+
 
         }.addOnFailureListener { exception ->
             Log.w(TAG, "Error getting documents.", exception)

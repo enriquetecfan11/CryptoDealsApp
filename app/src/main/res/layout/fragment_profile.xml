@@ -3,55 +3,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     android:orientation="vertical"
-    tools:context=".home.ProfileFragment"
-   >
+    tools:context=".home.ProfileFragment">
+
+    <TextView
+        android:id="@+id/txtname"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center_horizontal"
+        android:text="Welcome Enrique Rodriguez Vela "
+        android:textColor="@color/white"
+        android:textSize="25dp" />
 
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/btclogo" />
+        android:src="@drawable/ic_baseline_account_circle_24" />
 
-    <RelativeLayout
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtemail"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:orientation="vertical">
+        android:layout_height="60dp"
+        android:layout_below="@+id/txtusername"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:text="kikerodrivela@gmail.com"
+        android:textColor="@color/white"
+        android:textSize="25dp" />
 
-        <TextView
-            android:id="@+id/txtname2"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginTop="70dp"
-            android:gravity="center_horizontal"
-            android:text="Enrique Rodriguez Vela "
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-
-        <TextView
-            android:id="@+id/txtemail"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_below="@+id/txtusername"
-            android:layout_marginTop="5dp"
-            android:gravity="center_horizontal"
-            android:text="kikerodrivela@gmail.com"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-
-    </RelativeLayout>
 
     <Button
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="90dp"
         android:id="@+id/btnLogOut"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#013135"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/background"
         android:text="CERRAR SESION"
         android:textSize="17sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
 </LinearLayout>
