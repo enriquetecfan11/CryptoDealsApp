@@ -55,7 +55,7 @@
     <Button
         android:id="@+id/btlogin"
         style="@style/Widget.MaterialComponents.Button.Icon"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textfield2"
         android:layout_centerHorizontal="true"
@@ -66,13 +66,22 @@
     <Button
         android:id="@+id/registerbutton"
         style="@style/Widget.MaterialComponents.Button.Icon"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/btlogin"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="Register"
         android:textSize="20dp" />
+
+    <com.google.android.gms.common.SignInButton
+        android:layout_below="@+id/registerbutton"
+        android:id="@+id/btnGoogle"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 
 
 </RelativeLayout>

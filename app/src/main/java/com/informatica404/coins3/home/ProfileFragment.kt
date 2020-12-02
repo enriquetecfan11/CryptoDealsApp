@@ -1,5 +1,6 @@
 package com.informatica404.coins3.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -10,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.informatica404.coins3.R
 import com.informatica404.coins3.Users
+import com.informatica404.coins3.start.Login
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 
@@ -31,6 +33,13 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         getCurrentUser()
+
+        btnLogOut.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            activity?.finish()
+            val homeIntent = Intent(activity, Login::class.java)
+            startActivity(homeIntent)
+        }
     }
 
     fun getCurrentUser() {
@@ -53,7 +62,5 @@ class ProfileFragment : Fragment() {
             Log.w(TAG, "Error getting documents.", exception)
         }
     }
-
-
 
 }

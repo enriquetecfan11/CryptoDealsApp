@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.Gson
 import com.informatica404.coins3.MainAdapter
 import com.informatica404.coins3.R
+import com.informatica404.coins3.SingleCoin
 import com.informatica404.coins3.models.CryptoCoins
+import kotlinx.android.synthetic.main.crypto_item.*
 import kotlinx.android.synthetic.main.fragment_coins.*
 import java.io.BufferedReader
 import java.io.IOException
@@ -29,9 +31,14 @@ class CoinsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         val listaCoins = readJsonFromFile()
         val mAdapter = MainAdapter(listaCoins.data) {
-
+                val fragment = SingleCoin()
+                fragment.arguments = Bundle().apply {
+                    putSerializable("coin", it)
+            }
+            activity!!.supportFragmentManager.beginTransaction().replace(R.id.main_container, fragment).addToBackStack("").commit()
         }
         recyclerview.layoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)

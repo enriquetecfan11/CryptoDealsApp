@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".home.ProfileFragment">
+    tools:context=".home.ProfileFragment"
+   >
 
     <ImageView
         android:layout_width="150dp"
@@ -41,5 +42,16 @@
             android:textSize="25dp" />
 
     </RelativeLayout>
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btnLogOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#013135"
+        android:text="CERRAR SESION"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        />
 
 </LinearLayout>

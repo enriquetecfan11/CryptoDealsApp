@@ -54,15 +54,6 @@
                 android:hint="1,000"
                 />
 
-            <Button
-                android:id="@+id/btnviewmore"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_below="@id/cryptologo"
-                android:layout_toEndOf="@id/cryptoname"
-                android:background="@drawable/ic_baseline_read_more_24"
-                />
-
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 

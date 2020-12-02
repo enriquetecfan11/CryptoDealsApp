@@ -12,7 +12,8 @@
       "symbol": "eth",
       "name": "Ethereum",
       "image": "https://assets.coingecko.com/coins/images/279/large/ethereum.png?1595348880",
-      "current_price": 343.21
+      "current_price": 343.21,
+      "hig_price": 5500.23
     },
     {
       "id": "tether",

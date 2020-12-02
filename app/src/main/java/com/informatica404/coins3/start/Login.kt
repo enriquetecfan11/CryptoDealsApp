@@ -5,8 +5,13 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.SignInButton
+import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
@@ -24,43 +29,111 @@ class Login : AppCompatActivity() {
     val TAG = "miapp"
     lateinit var db: FirebaseFirestore
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        SingWihEmail()
 
         // Initialize Firebase Auth
         auth = Firebase.auth
         // Initialize Firebase Firestore
         db = Firebase.firestore
 
-        setup()
-
-        registerbutton.setOnClickListener{
+        registerbutton.setOnClickListener {
             val myIntent = Intent(this, register::class.java)
             this.startActivity(myIntent)
+        }
 
+        // Configure Google Sign In
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+
+        googleSignInClient = GoogleSignIn.getClient(this, gso);
+
+        // Initialize Firebase Auth
+        auth = Firebase.auth
+
+        val btnGoogle = findViewById<SignInButton>(R.id.btnGoogle)
+        btnGoogle.setOnClickListener {
+            signIn()
+        }
+
+    }
+
+    fun signIn() {
+        val signInIntent = googleSignInClient.signInIntent
+        startActivityForResult(signInIntent, RC_SIGN_IN)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == RC_SIGN_IN) {
+            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
+
+            try {
+                // Google Sign In was successful, authenticate with Firebase
+                val account = task.getResult(ApiException::class.java)!!
+                Log.d(
+                    TAG, "firebaseAuthWithGoogle:" + account.id +
+                            "\n" + account.displayName +
+                            "\n" + account.email +
+                            "\n" + account.familyName
+                            + "\n" + account.photoUrl
+                            + "\n" + account.givenName
+                )
+
+                firebaseAuthWithGoogle(account.idToken!!)
+            } catch (error: ApiException) {
+                // Google Sign In failed, update UI appropriately
+                Log.w(TAG, "Google sign in failed", error)
+                // ...
+            }
+        }
+
+    }
+
+    private fun firebaseAuthWithGoogle(idToken: String) {
+        val credential = GoogleAuthProvider.getCredential(idToken, null)
+        auth.signInWithCredential(credential)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Sign in success, update UI with the signed-in user's information
+                    Log.d(TAG, "signInWithCredential:success")
+                    val user = auth.currentUser
+                    navigateToHome()
+                } else {
+                    // If sign in fails, display a message to the user.
+                    Log.w(TAG, "signInWithCredential:failure", task.exception)
+                }
+            }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        // Check if user is signed in (non-null) and update UI accordingly.
+        val currentUser = auth.currentUser
+
+        if (currentUser != null) {
+            Log.v(TAG, "Usuario logueado ${currentUser.uid}")
+            navigateToHome()
         }
     }
 
 
     fun navigateToHome() {
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, MainActivity::class.java).apply {
+
+        })
         finish()
     }
 
-    fun createUser(firstName: String, uid: String) {
-        val newUser = Users()
-        newUser.name = firstName
 
-        db.collection("users").document(uid).set(newUser).addOnSuccessListener {
-            navigateToHome()
-        }.addOnFailureListener { e ->
-            Log.w(TAG, "Error adding document", e)
-        }
-
-    }
-
-    fun setup() {
+    fun SingWihEmail() {
 
         btlogin.setOnClickListener {
             if (email.text!!.isNotEmpty() && pass.text!!.isNotEmpty()) {
@@ -71,14 +144,12 @@ class Login : AppCompatActivity() {
                         pass.text.toString()
                     ).addOnCompleteListener {
                         if (it.isSuccessful) {
-                            showHome(it.result?.user?.email ?:"", ProviderType.BASIC)
+                            showHome(it.result?.user?.email ?: "", ProviderType.BASIC)
                         } else {
                             showAlert()
                         }
                     }
             }
-
-            Log.v("MIAPP", "ERES TONTISIMO")
         }
     }
 
@@ -97,7 +168,6 @@ class Login : AppCompatActivity() {
             putExtra("email", email)
             putExtra("provider", provider.name)
         }
-
         startActivity(homeIntent)
     }
 
