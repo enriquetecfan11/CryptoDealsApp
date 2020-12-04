@@ -11,16 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SingleCoin"></activity>
         <activity android:name=".register" />
-        <activity android:name=".start.splash">
+        <activity android:name=".start.splash"
+            android:theme="@style/start">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".start.Login" />
+        <activity android:name=".start.Login"
+            android:theme="@style/start"/>
         <activity android:name=".MainActivity" />
     </application>
 

@@ -9,7 +9,7 @@
     >
 
     <ImageView
-        android:src="@drawable/cryptodealslogo"
+        android:src="@drawable/crytodealslogo2"
         android:id="@+id/Logo"
         android:layout_width="match_parent"
         android:layout_height="210dp"

@@ -3,19 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
     android:orientation="vertical"
     tools:context=".home.ProfileFragment">
 
     <TextView
         android:id="@+id/txtname"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_marginTop="100dp"
         android:gravity="center_horizontal"
         android:text="Welcome Enrique Rodriguez Vela "
         android:textColor="@color/white"
-        android:textSize="25dp" />
+        android:textSize="50dp" />
 
     <ImageView
         android:layout_width="150dp"

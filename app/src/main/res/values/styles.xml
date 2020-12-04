@@ -3,8 +3,16 @@
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">#425273</item>
+        <item name="colorPrimaryDark">#2C5CBD</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <style name="start" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#2a3449</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
 
 </resources>
