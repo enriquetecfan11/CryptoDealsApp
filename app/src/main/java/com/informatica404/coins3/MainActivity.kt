@@ -24,16 +24,16 @@ class MainActivity : AppCompatActivity() {
                 goToFragment(CoinsFragment())
                 true
             }
-            R.id.action_news -> {
-                goToFragment(NewsFragment())
-                true
-            }
             R.id.action_profile -> {
                 goToFragment(ProfileFragment())
                 true
             }
             R.id.action_home -> {
                 goToFragment(HomeFragment())
+                true
+            }
+            R.id.action_news ->{
+                goToFragment(NewsFragment())
                 true
             }
 

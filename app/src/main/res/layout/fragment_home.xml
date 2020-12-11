@@ -3,15 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home.CoinsFragment"
     android:orientation="vertical"
-   >
+    tools:context=".home.CoinsFragment"
+    >
 
 
     <RelativeLayout
-        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
         android:orientation="vertical">
 
         <TextView
@@ -19,170 +20,171 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="Welcome to Crypto Deals "
+            android:text="Welcome to"
             android:textColor="@color/white"
-            android:textSize="25dp"
-           />
+            android:textSize="25dp" />
 
         <TextView
-            android:layout_below="@+id/txtwelcome"
             android:id="@+id/txtusername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/txtwelcome"
             android:gravity="center_horizontal"
-            android:text="Username and surname"
+            android:text="Crypto Deals "
             android:textColor="@color/white"
-            android:textSize="30dp" />
+            android:textSize="35dp"
+            />
     </RelativeLayout>
 
-
-
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="390dp"
-        android:layout_height="220dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="8dp"
-        android:background="@color/card"
-        android:elevation="60dp">
-        <RelativeLayout
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/logobtc"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:src="@drawable/btclogo"
-            android:scaleType="centerCrop"
-            />
-
-        <TextView
-            android:id="@+id/btc"
-            android:layout_marginTop="10dp"
-            android:paddingTop="10dp"
-            android:gravity="center_horizontal"
-            android:layout_width="90dp"
-            android:layout_height="50dp"
-            android:text="BTC"
-            android:layout_marginStart="20dp"
-            android:textSize="20dp"
-            android:layout_below="@+id/logobtc"
-            />
-
-            <TextView
-                android:id="@+id/txtbtc"
-                android:layout_marginTop="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center_horizontal"
-                android:layout_width="90dp"
-                android:layout_height="40dp"
-                android:text="Bitcoin"
-                android:layout_marginStart="20dp"
-                android:textSize="20dp"
-                android:layout_below="@+id/btc"
-                />
-
-            <TextView
-                android:id="@+id/price"
-                android:layout_marginTop="110dp"
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="15.577,71€"
-                android:textSize="30dp"
-                android:layout_toRightOf="@id/btc"
-                />
-            <TextView
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:paddingStart="40dp"
-                android:paddingBottom="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="+50€ (20%)"
-                android:textSize="20dp"
-                android:layout_below="@+id/price"
-                android:layout_toRightOf="@+id/txtbtc"
-                />
-        </RelativeLayout>
-
-    </com.google.android.material.card.MaterialCardView>
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card1"
-        android:layout_width="390dp"
-        android:layout_height="220dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="8dp"
-        android:background="@color/card"
-        android:elevation="60dp">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
-
+            <!-- Media -->
             <ImageView
-                android:id="@+id/logoeth"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:src="@drawable/ethlogo"
-                android:scaleType="fitCenter"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bitcoinmoneda"
                 />
 
-            <TextView
-                android:id="@+id/eth"
-                android:layout_marginTop="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center_horizontal"
-                android:layout_width="90dp"
-                android:layout_height="50dp"
-                android:text="ETH"
-                android:layout_marginStart="20dp"
-                android:textSize="20dp"
-                android:layout_below="@+id/logoeth"
-                />
-
-            <TextView
-                android:id="@+id/txteth"
-                android:layout_marginTop="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center_horizontal"
-                android:layout_width="90dp"
-                android:layout_height="40dp"
-                android:text="Etherum"
-                android:layout_marginStart="20dp"
-                android:textSize="20dp"
-                android:layout_below="@+id/eth"
-                />
-
-            <TextView
-                android:id="@+id/priceeth"
-                android:layout_marginTop="110dp"
-                android:paddingTop="10dp"
-                android:gravity="center"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="15.577,71€"
-                android:textSize="30dp"
-                android:layout_toRightOf="@id/eth"
-                />
-            <TextView
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:paddingStart="40dp"
-                android:paddingBottom="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="+50€ (20%)"
-                android:textSize="20dp"
-                android:layout_below="@+id/priceeth"
-                android:layout_toRightOf="@+id/eth"
-                />
-        </RelativeLayout>
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Title, secondary and supporting text -->
+                <TextView
+
+                    android:id="@+id/btc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BTC"
+                    android:paddingStart="90dp"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textSize="25dp"
+                    />
+
+                <TextView
+                    android:layout_toRightOf="@+id/btc"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/bitcoin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Bitcoin"
+                    android:textSize="25dp"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    />
+
+                <TextView
+                    android:textAlignment="center"
+                    android:id="@id/pricebtc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btc"
+                    android:layout_marginTop="8dp"
+                    android:text="Price"
+                    android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/pricebtc"
+                    android:id="@+id/btchange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Price Change 24"
+                    android:textAppearance="?attr/textAppearanceHeadline6" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Media -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ethmoneda"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Title, secondary and supporting text -->
+            <TextView
+
+                android:id="@+id/eth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ETH"
+                android:paddingStart="90dp"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textSize="25dp"
+                />
+
+            <TextView
+                android:layout_toRightOf="@+id/eth"
+                android:layout_marginStart="10dp"
+                android:id="@+id/ethereum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="ethereum"
+                android:textSize="25dp"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                />
+
+            <TextView
+                android:textAlignment="center"
+                android:id="@id/priceth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ethereum"
+                android:layout_marginTop="8dp"
+                android:text="Price"
+                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/priceth"
+                android:id="@+id/ethchange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Price Change 24"
+                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
 
 </LinearLayout>

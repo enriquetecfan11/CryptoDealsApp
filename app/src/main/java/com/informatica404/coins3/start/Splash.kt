@@ -22,7 +22,7 @@ class splash : AppCompatActivity() {
 
         Handler(Looper.getMainLooper()).postDelayed({
             logo.visibility = View.VISIBLE
-        }, 500)
+        }, 900)
 
     }
 
@@ -36,7 +36,7 @@ class splash : AppCompatActivity() {
     fun nextActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, Login::class.java))
-        }, 600)
+        }, 900)
     }
 
 }

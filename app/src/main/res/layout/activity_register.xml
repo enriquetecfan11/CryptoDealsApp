@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:background="@drawable/fondoapp"
+    android:background="@drawable/background"
     android:orientation="vertical"
     android:baselineAligned="false"
     android:gravity="center"
@@ -12,9 +12,10 @@
         android:src="@drawable/crytodealslogo2"
         android:id="@+id/Logo"
         android:layout_width="match_parent"
-        android:layout_height="210dp"
+        android:layout_height="150dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:layout_marginBottom="20dp"
         />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -22,6 +23,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Logo"
+        android:layout_marginBottom="20dp"
         android:layout_centerInParent="true"
         android:hint="Username">
 
@@ -41,6 +43,7 @@
         android:layout_below="@+id/textField"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:layout_marginBottom="20dp"
         android:hint="Email">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -58,6 +61,7 @@
         android:layout_below="@+id/textfield2"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:layout_marginBottom="20dp"
         android:hint="Password">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -72,7 +76,7 @@
         android:id="@+id/btnSignUp"
         style="@style/Widget.MaterialComponents.Button.Icon"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@id/textfield3"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"

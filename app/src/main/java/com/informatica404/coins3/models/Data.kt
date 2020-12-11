@@ -1,18 +1,18 @@
 package com.informatica404.coins3.models
 
-
-import com.google.gson.annotations.SerializedName
-import java.io.Serializable
-
-data class CryptoCoinsItem(
-    @SerializedName("current_price")
-    val currentPrice: Double,
-    @SerializedName("id")
+data class Data(
+    val body: String,
+    val categories: String,
+    val downvotes: String,
+    val guid: String,
     val id: String,
-    @SerializedName("image")
-    val image: String,
-    @SerializedName("name")
-    val name: String,
-    @SerializedName("symbol")
-    val symbol: String
-): Serializable
+    val imageurl: String,
+    val lang: String,
+    val published_on: Int,
+    val source: String,
+    val source_info: SourceInfo,
+    val tags: String,
+    val title: String,
+    val upvotes: String,
+    val url: String
+)
